@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types'
-import sessionData from "../utils/sessionData.js"
+import sessionData from "../utils/sessionData";
+
 const style = {
   buttonRetry: {
     fontSize: "1.5em",
@@ -30,14 +31,14 @@ class Done extends React.Component {
     const { divider, buttonRetry, otherButton, poinstStyle } = style;
     return (
       <div>
-        <h1> !!!کھیل ختم </h1>
+        <h1>GAME OVER</h1>
         <hr style={divider} />
         <h3>
-          حتمی اسکور<b style={poinstStyle}>{" =  " + this.props.points}</b>
+          FINAL SCORE <b style={poinstStyle}>{this.props.points}</b>
         </h3>
         <br />
         {sessionData.type == 'c' ? <h3 style={buttonRetry} onClick={this.props.retryGame}>
-          دوبارہ کوشش کریں
+          RETRY
         </h3> : null}
         {/* <h5 style={otherButton} onClick={this.props.onReStartGame}>
           Another player
